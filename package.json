@@ -4,9 +4,9 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
-    "js-combinatorics": "^0.4.0",
-    "npm": "^2.6.0",
-    "safe-mkdir": "^1.0.2"
+    "js-combinatorics": "0.4.0",
+    "npm": "2.6.0",
+    "safe-mkdir": "1.0.2"
   },
   "devDependencies": {},
   "scripts": {
