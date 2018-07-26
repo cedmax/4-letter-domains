@@ -4,7 +4,7 @@ const logger = require('../scripts/logger')
 module.exports = ({ domainExtension }) =>
   logger(
     db
-      .getCombinations()
+      .get('combinations')
       .filter({ available: true })
       .value()
       .map(
