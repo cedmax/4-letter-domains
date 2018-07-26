@@ -1,7 +1,6 @@
 {
 	"chars": "abcdefghijklmnopqrstuvwxyz",
-	"chunkSize": 500,
 	"domainExtension": ".it",
-	"domainLength": 4,
-	"tmpPath": "./tmp/"
+	"domainLength": 3,
+	"parallel": 5
 }
