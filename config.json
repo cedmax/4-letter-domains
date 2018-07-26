@@ -2,5 +2,5 @@
 	"chars": "abcdefghijklmnopqrstuvwxyz",
 	"domainExtension": ".it",
 	"domainLength": 4,
-	"parallel": 20
+	"parallel": 10
 }
