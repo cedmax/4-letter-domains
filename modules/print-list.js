@@ -1,5 +1,5 @@
-const db = require("../scripts/db");
-const logger = require("../scripts/logger");
+const db = require('../scripts/db')
+const logger = require('../scripts/logger')
 
 module.exports = ({ domainExtension }) =>
   logger(
@@ -11,5 +11,5 @@ module.exports = ({ domainExtension }) =>
         ({ name }) =>
           `${name}${domainExtension} - https://who.is/whois/${name}${domainExtension}`
       )
-      .join("\n")
-  );
+      .join('\n')
+  )

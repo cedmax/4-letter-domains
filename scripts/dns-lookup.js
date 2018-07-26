@@ -1,4 +1,7 @@
-const dns = require("dns");
+const dns = require('dns')
 
 module.exports = (domain, callback) =>
-  dns.resolveNs(domain, err => callback(!!(err && err.code === "ENOTFOUND")));
+  dns.resolveNs(domain, err => {
+    const available = !!(err && err.code === 'ENOTFOUND')
+    callback(available)
+  })

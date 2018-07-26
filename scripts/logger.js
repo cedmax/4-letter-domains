@@ -1,1 +1,1 @@
-module.exports = (...args) => console.log(...args); //eslint-disable-line
+module.exports = (...args) => console.log(...args) //eslint-disable-line
