@@ -11,31 +11,21 @@ There are a lot of Italian (.it) 4 letter domains yet available, I was playing a
 First of all download this repo content, npm install.
 
 
-## STEP 1
+## Start
 
 ```
-node 01-generateCombinations.js
+yarn install && yarn start
 ```
 
-this will create in a folder ./tmp and within it a series of json files cotaining 750 four letter combinations each.
+this will create a `db.json` file containg all the combinations and start looking up the dns for each.
+Due to the nic.it rules the domains not having a NS record available are most likely available (or pendingDelete).
 
+This step is parallelised in chuncks sized as per config, but it might still require hours. 
 
-## STEP 2 
+You can stop it anytime: as long as the db.json doesn't get deleted (or you don't change the domain extension / length, or the characters range in the config) it will restart where you left off.
 
-```
-node 02-DNSLookup.js
-```
-
-this will unroll the json files content to create a list of all the 4 letter .it domains not having a NS record available. Due to the nic.it rules this means that most likely those domains are available.
- 
-This step might require hours. This is due to the fact that I made it syncronous not to flood your network. I suggest you to run it over night. 
-
-Don't worry if it fails, the whole point of having many json files instead of a huge one, and deleting them when I'm done with it, is to be able to restart where you left off.
-
-## STEP 3 
+In order to start from scratch run
 
 ```
-node 03-sortResults.js
+yarn reset
 ```
-
-this will sort the content of your results.txt enabling you to quickly read through them without too much effort (and since last time I checked there were more than 400k domains available it's worth having them ordered).
