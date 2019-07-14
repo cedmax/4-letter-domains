@@ -7,7 +7,8 @@
     "async": "2.6.1",
     "cli-progress": "2.0.0",
     "js-combinatorics": "0.5.3",
-    "lowdb": "1.0.0"
+    "lowdb": "1.0.0",
+    "whois-json": "^2.0.4"
   },
   "devDependencies": {
     "eslint": "^5.2.0",

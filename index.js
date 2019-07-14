@@ -5,6 +5,6 @@ const printList = require('./modules/print-list')
 ;(async config => {
   setupDb(config)
   await lookup(config)
-  printList(config)
+  await printList(config)
   process.exit(0)
 })(require('./config.json'))
